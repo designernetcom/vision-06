@@ -21314,6 +21314,7 @@ html.lenis body {
   letter-spacing: 4px;
   line-height: 0.8;
   margin-top: 50px;
+  margin-bottom: 18px;
   display: flex;
   justify-content: center;
 }
@@ -21405,9 +21406,9 @@ html.lenis body {
   height: 65px;
   fill: var(--rs-theme-orange);
 }
-.rs-work-step-one .rs-work-step-icon::before {
+/* .rs-work-step-one .rs-work-step-icon::before {
   position: absolute;
-  color: var(--rs-text-primary);
+  color: #00943C;
   counter-increment: count;
   content: "0" counter(count);
   z-index: 1;
@@ -21417,9 +21418,9 @@ html.lenis body {
   top: 50%;
   opacity: 0.08;
   transform: translateY(-50%);
-  line-height: 0.8;
+  line-height: 1;
   transition: all 0.5s ease;
-}
+} */
 @media only screen and (max-width: 1199px) {
   .rs-work-step-one .rs-work-step-icon::before {
     font-size: 70px;
@@ -25908,55 +25909,65 @@ background-color: #1877F2 !important;
 
 
 
+.card {   
+  width: 100%;   
+  height: 180px;   /* Further reduced for 4 cards in row */
+  cursor: pointer;   
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);   
+  border-radius: 10px;   
+  background-size: 110%;   
+  background-position: center;   
+  background-repeat: no-repeat;   
+  position: relative;   
+  z-index: 1;   
+  overflow: hidden;   
+  transition: 0.2s all ease;    
+}   
 
-.card {
-  width:100%;
-  height: 300px;
-  cursor: pointer;
-  outline: 1px solid hsla(0, 0%, 100%, 0.2);
-  border-radius: 10px;
-  background-size: 110%;
-  background-position: center ;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.2s all ease;
-  
+.card::before {   
+  content: "";   
+  position: absolute;   
+  top: 0;   
+  left: 0;   
+  width: 100%;   
+  height: 100%;   
+  background: linear-gradient(to top, #000, transparent);   
+  opacity: 1;   
+  transition: opacity 0.2s ease;   
+  z-index: 1;   
+  pointer-events: none;   
+}  
+
+.info {   
+  position: absolute;   
+  bottom: -25px;   
+  font-size: 20px;   
+  font-weight: 600;   
+  transition: transform 0.3s ease;   
+  z-index: 2;   
+  padding: 10px;   
+  color: white;   
+  transform: translatey(-35px);   
+  opacity: 1; 
+}  
+
+.card:hover img {   
+  transform: scale(1.3) !important; 
 }
 
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.card img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #000, transparent);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 1;
-  pointer-events: none;
- opacity: 1;
-}
-
-.info {
-  position: absolute;
-  bottom: -25px;
-  font-size: 20px;
-  font-weight: 600;
+  object-fit: cover;
   transition: transform 0.3s ease;
-  z-index: 2;
-  padding: 10px;
-  color: white;
-  transform: translatey(-35px);
-  opacity: 1;
 }
 
-.card:hover img{
-  transform: scale(1.3) !important;
+.industries-photo {
+  margin-bottom: 1.5rem;
 }
 
+.rs-section-title {
+  margin-bottom: 2rem;
+}
 
 
