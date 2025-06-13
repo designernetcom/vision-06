@@ -41,10 +41,14 @@
           (document.getElementById("rs-dir-toggler").checked = "rtl" === a);
       })();
   localStorage.getItem("rs_dir");
+  // e(window).on("load", function (t) {
+  //   e("#pre-load").delay(600).fadeOut(500),
+  //     e(".pre-loader").delay(600).fadeOut(500);
+  // });
   e(window).on("load", function (t) {
-    e("#pre-load").delay(600).fadeOut(500),
-      e(".pre-loader").delay(600).fadeOut(500);
-  });
+    e("#pre-load").delay(300).fadeOut(300),
+      e(".pre-loader").delay(300).fadeOut(300);
+});
   var t = document.getElementById("year");
   t && (t.innerHTML = new Date().getFullYear()),
     e(".offcanvas-close,.offcanvas-overlay").on("click", function () {
